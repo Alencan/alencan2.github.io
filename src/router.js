@@ -1,13 +1,29 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import RandomListen from './views/love/RandomListen.vue'
+import ShowList from './views/love/ShowList.vue'
+import Programs from './views/love/Programs.vue'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
+      path:'/RandomListen/:fatherID/:id',
+      component:RandomListen,
+      
+    },
+    {
+      path:'/ShowList',
+      component:ShowList
+    },
+    {
+      path:'/Programs/:id',
+      component:Programs
+    },
+    {
+      path: '/home',
       name: 'home',
       component: Home
     },
